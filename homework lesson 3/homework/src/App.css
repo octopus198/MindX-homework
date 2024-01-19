@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+
+.header {
+  background-color: aquamarine;
+  height: 10vh;
+  line-height: 10vh;
+  text-align: center;
+  
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aside {
+  background-color: bisque;
+  height: 60vh;
+  line-height: 60vh;
+  flex: 1;
+}
+
+.title-list {
+  flex: 3;
+}
+
+.box-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.box {
+  background-color: cornsilk;
+  height: 20vh;
+  line-height: 20vh;
+  flex: 1 200px;
+}
+
+.footer {
+  background-color: pink;
+  height: 10vh;
+  line-height: 10vh;
+}
+
+.first-title {
+  border: solid 1px red;
+  background-color: gainsboro;
+}
+
+.header, .aside, .box, .footer {
+  text-align: center;
+}
