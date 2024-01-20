@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Title = (props) => {
+const Title = ({headerTitle, text, backgroundColor, border}) => {
   return (
-    <div>{props.children}</div>
+    <div style={{backgroundColor, border}}> 
+      <h1>{headerTitle}</h1>
+      <p>{text}</p>
+      </div>
   )
 }
 

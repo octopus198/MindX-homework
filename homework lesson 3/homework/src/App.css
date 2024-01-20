@@ -49,11 +49,11 @@ body {
   line-height: 10vh;
 }
 
+.header, .aside, .box, .footer {
+  text-align: center;
+}
+
 .first-title {
   border: solid 1px red;
   background-color: gainsboro;
-}
-
-.header, .aside, .box, .footer {
-  text-align: center;
 }
