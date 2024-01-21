@@ -1,15 +1,16 @@
 import React from 'react'
 
-const Tasks = () => {
+export const Tasks = ({...props}) => {
+  const handleChange = () => {
+    props.checked = !props.checked;
+    console.log(props.checked)
+    props.onChange();
+  }
   return (
     <div className='tasks'>
-        <ul>
-            <li>Clean up bedroom</li>
-            <li>Buy some milk</li>
-            <li>Jogging</li>
-            <li>Learn React</li>
-            <li>Doing exercises</li>
-        </ul>
+      <input type="checkbox" checked={props.checked} onChange={handleChange} />
+      <span>{props.text}</span>
+      {props.checked ? (<span>Done</span> ) : ("")}
     </div>
   )
 }

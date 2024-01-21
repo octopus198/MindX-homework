@@ -13,10 +13,6 @@ body {
   
 }
 
-.tasks {
-  min-height: 30vh;
-}
-
 .input-task {
   border: none;
   font-size: 32px;
