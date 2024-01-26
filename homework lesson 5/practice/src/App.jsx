@@ -12,11 +12,12 @@ function App() {
   });
 
   const [displayForm, setDisplayForm] = useState("none");
-  const [displayCreateExpense, setDisplayCreateExpense] = useState("block")
+  const [displayCreateExpense, setDisplayCreateExpense] = useState("block");
 
-  const record = {};
-  
+  const [recordList, setRecordList] = useState([]);
+
   const onChange = (updatedInfo) => {
+    console.log(updatedInfo);
     setUser(updatedInfo);
   };
 
@@ -30,19 +31,41 @@ function App() {
     setDisplayForm(displayForm === "none" ? "block" : "none");
   };
 
-  console.log(user);
+  const formData = (data) => {
+    setRecordList([...recordList, user]);
+    data.preventDefault();
+  };
 
   return (
     <div>
-      <Form user={user} onChange={onChange} cancelCreateExpense={cancelCreateExpense} displayForm={displayForm} />
-      <CreateFirstExpense createFirstExpense={createFirstExpense} displayCreateExpense={displayCreateExpense} />
+      <Form
+        user={user}
+        onChange={onChange}
+        formData={formData}
+        cancelCreateExpense={cancelCreateExpense}
+        displayForm={displayForm}
+      />
+      <CreateFirstExpense
+        createFirstExpense={createFirstExpense}
+        displayCreateExpense={displayCreateExpense}
+      />
+
       <div className="recordList">
-      <div className="filterByYear"> 
-        <p>Filter by year</p>
-        <button>Filter</button>
+        <div className="filterByYear">
+          <p>Filter by year</p>
+          <button className="filterButton">Filter</button>
+        </div>
+        {recordList.map((item, index) => {
+          return (
+            <Records
+              key={index}
+              name={item.name}
+              amount={item.amount}
+              date={item.date}
+            />
+          );
+        })}
       </div>
-      <Records />
-    </div>
     </div>
   );
 }

@@ -43,6 +43,7 @@ input {
 
 .addExpense {
   width: 800px;
+  margin-bottom: 40px;
 }
 .addExpense,
 .createFirstExpense {
@@ -71,8 +72,12 @@ input {
   color: #6a6a6a;
 }
 
+#form {
+  display: flex;
+  flex-direction: column;
+}
 .createExpenseButtons {
-  align-self: end;
+  align-self: flex-end;
 }
 
 .createFirstExpense {
@@ -80,6 +85,7 @@ input {
   width: 800px;
   justify-content: center;
   align-items: stretch;
+  margin-bottom: 40px;
 }
 
 .firstExpenseButton {
@@ -87,3 +93,86 @@ input {
   justify-content: center;
 }
 
+.filterByYear {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.recordList {
+  width: 800px;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.filterByYear {
+  width: 740px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.filterButton {
+  width: 170px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+}
+
+.record {
+  display: flex;
+  background-color: #575757;
+  width: 740px;
+  justify-content: space-between;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.recordDate {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  color: white;
+  border: solid 1px white;
+  border-radius: 12px;
+  width: 120px;
+  height: 120px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.dateDay,
+.dateMonth,
+.dateYear {
+  margin-block: 0px;
+}
+
+.dateDay {
+  font-size: 24px;
+}
+
+.recordName {
+  font-size: 36px;
+  color: white;
+}
+
+.recordAmount {
+  background-color: #862796;
+  border: solid 1px white;
+  border-radius: 12px;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px 10px 20px;
+}
+
+.recordDateAndName {
+  display: flex;
+}
