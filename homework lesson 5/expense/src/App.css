@@ -1,0 +1,216 @@
+body {
+  background-color: #323232;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main {
+  width: 800px;
+}
+
+.createFirstExpense {
+  background-color: #897BDA;
+  border: none;
+  border-radius: 12px;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 50px;
+}
+
+.addFirstExpenseBtn {
+  background-color: #862796;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 220px;
+  border-radius: 12px;
+}
+
+.form {
+  width: 800px;
+  background-color: #897BDA;
+  padding: 20px 30px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+label {
+  color: white;
+}
+
+input {
+  width: 570px;
+  height: 40px;
+  color: #B0B0B0;
+  border: none;
+  border-radius: 12px;
+}
+
+.inputField {
+  display: flex;
+}
+
+.formBtns {
+  align-self: end;
+}
+
+.addExpenseBtn {
+  background-color: #862796;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 16px;
+  margin-right: 10px;
+  color: white;
+}
+.cancelExpenseBtn {
+  background-color: #D0D0D0;
+  border: solid  1px #862796;
+  border-radius: 12px;
+  padding: 8px 16px;
+}
+
+.expenseResult {
+  background-color: #1A1A1A;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.record {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  border-radius: 12px;
+  background-color: #575757;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.record-dateAndName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.record-date {
+  width: 100px;
+  height: 100px;
+  background-color: #1A1A1A;
+  border-radius: 12px;
+  border: solid 1px white;
+  display: grid;
+  place-items: center;
+  margin-right: 10px;
+}
+
+.record-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.record-amount {
+  background-color: #862796;
+  border: solid 1px white;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+.breakdownDate {
+  margin-block: 0;
+}
+
+.filterByYear {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.dropdownBtn {
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  padding: 8px 16px;
+  border: none;
+}
+
+.dropdownBtn:hover, .dropdownBtn:focus {
+  background-color:gainsboro;
+}
+
+.dropdownYearList {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+}
+
+.dropdownContent.show {
+  display: block;
+}
+
+.dropdownYear, .dropdownBtn {
+  /* padding: 10px 20px; */
+  width: 170px;
+  height: 50px;
+}
+
+.dropdownYearList:hover .dropdownContent {display: block;}
+
+.expenseChart {
+  background-color: #E1CAE4;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar-border {
+  background-color: #BAA5ED;
+  border: solid 1px #000000;
+  border-radius: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  overflow: hidden;
+  height: 140px;
+  width: 20px;
+}
+
+.chartMonth {
+  text-align: center;
+}
+
+.bar-content {
+  background-color: #3D15A9;
+  
+}
